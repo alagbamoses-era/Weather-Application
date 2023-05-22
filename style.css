@@ -45,7 +45,18 @@ li{
     
 }
 
-.search-form{
-    margin-bottom: 30px;
-    padding-bottom: 30px;
+.weather-temperature{
+    color: rgb(33, 33, 33);
+line-height: 64px;
+
+}
+
+.temp{
+    font-size: 35px;
+
+}
+.units{
+    position: relative;
+    top: -20px;
+
 }

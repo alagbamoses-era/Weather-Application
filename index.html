@@ -10,6 +10,7 @@
       integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="style.css" />
     <title>Web App</title>
   </head>
@@ -50,7 +51,12 @@
                 src="https://openweathermap.org/img/wn/04d@2x.png"
                 alt="Cloud"
               />
-              <span>30 °C|°F</span>
+              <span class="weather-temperature"
+                ><strong class="temp">30</strong
+                ><span class="units">
+                  <a href="#">°C</a>|<a href="#">°F</a></span
+                ></span
+              >
             </div>
             <div class="col-6">
               <ul>
