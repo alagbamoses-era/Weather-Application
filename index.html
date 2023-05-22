@@ -40,10 +40,10 @@
             </div>
           </form>
 
-          <h1>Abeokuta</h1>
+          <h1>London</h1>
           <ul>
-            <li>Monday 09:54</li>
-            <li>Overcast cloud</li>
+            <li id="date">Friday 09:54</li>
+            <li id="description">Overcast cloud</li>
           </ul>
           <div class="row">
             <div class="col-6">
@@ -52,7 +52,7 @@
                 alt="Cloud"
               />
               <span class="weather-temperature"
-                ><strong class="temp">30</strong
+                ><strong class="temp" id="temperature"></strong
                 ><span class="units">
                   <a href="#">°C</a>|<a href="#">°F</a></span
                 ></span
@@ -60,8 +60,8 @@
             </div>
             <div class="col-6">
               <ul>
-                <li>Humildity: 66%</li>
-                <li>Wind: 2km/hr</li>
+                <li>Humildity:<span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span>km/hr</li>
               </ul>
             </div>
           </div>
