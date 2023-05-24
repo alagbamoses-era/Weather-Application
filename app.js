@@ -30,6 +30,10 @@ function displayTemperature(response){
     let descriptionElement = document.querySelector("#description")
     let dateElement = document.querySelector("#date")
     let iconElement = document.querySelector("#icon")
+
+    celciusTemperature = response.data.main.temp
+    
+    temperatureElement.innerHTML = Math.round(celciusTemperature)
     
 
 
@@ -83,6 +87,24 @@ navigator.geolocation.getCurrentPosition(searcLocation)
 }
 
 
+function displayFahrenheitConversion(event) {
+    event.preventDefault()
+
+    let temperatureElement = document.querySelector("#temperature")
+
+    fahrenheitTemperature = (celciusTemperature * 9/5) + 32
+
+    temperatureElement.innerHTML = Math.round(fahrenheitTemperature)
+
+}
+
+function displayCelciusConversion(event) {
+    event.preventDefault()
+    let temperatureElement = document.querySelector("#temperature")
+    temperatureElement.innerHTML = Math.round(celciusTemperature)
+}
+
+//let celciusTemperature = null
 
 
 let form = document.querySelector("#search-form");
@@ -90,5 +112,11 @@ form.addEventListener("submit", handleSubmit)
 
 let currentLocationElement = document.querySelector("#current-location")
 currentLocationElement.addEventListener("click", getCurrentLocation)
+
+let fahrenheitValue = document.querySelector("#fahrenheit")
+fahrenheitValue.addEventListener("click", displayFahrenheitConversion)
+
+let celciusValue = document.querySelector("#celcius")
+celciusValue.addEventListener("click", displayCelciusConversion)
 
 search("Lagos")
