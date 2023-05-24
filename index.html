@@ -18,10 +18,15 @@
     <div class="container">
       <div class="weather">
         <div class="weather-app">
-          <form class="form-group">
+          <form class="form-group" id="search-form">
             <div class="row">
               <div class="col-6">
-                <input type="search" class="form-control" />
+                <input
+                  type="search"
+                  class="form-control"
+                  id="city-input"
+                  placeholder="Type a city name"
+                />
               </div>
               <div class="col-3">
                 <input
@@ -35,15 +40,16 @@
                   type="submit"
                   class="btn btn-success W-100"
                   value="Current"
+                  id="current-location"
                 />
               </div>
             </div>
           </form>
 
-          <h1>London</h1>
+          <h1 id="city"></h1>
           <ul>
-            <li id="date">Friday 09:54</li>
-            <li id="description">Overcast cloud</li>
+            <li id="date"></li>
+            <li id="description"></li>
           </ul>
           <div class="row">
             <div class="col-6">
@@ -67,7 +73,10 @@
             </div>
           </div>
         </div>
-        <a href="https://github.com/alagbamoses-era/Weather-Application">
+        <a
+          href="https://github.com/alagbamoses-era/Weather-Application"
+          target="_blank"
+        >
           Open-Source code by</a
         >: Moses Agunbiade
       </div>

@@ -30,6 +30,7 @@ function displayTemperature(response){
     let descriptionElement = document.querySelector("#description")
     let dateElement = document.querySelector("#date")
     let iconElement = document.querySelector("#icon")
+    
 
 
 
@@ -40,12 +41,54 @@ function displayTemperature(response){
     descriptionElement.innerHTML = response.data.weather[0].description
     dateElement.innerHTML = formatDate(response.data.dt *1000)
     iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
-    console.log(response.data.weather[0].icon)
+    iconElement.setAttribute("alt", response.data.weather[0].description);
+
+    let cityElement = document.querySelector("#city")
+    cityElement.innerHTML = response.data.name
+    
+    
 }
 
-apiKey = "6ce66d083b4d6dddb74ba02266495c46"
+function search(city){
+    apiKey = "6ce66d083b4d6dddb74ba02266495c46"
 
-city = "London"
 apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
 
 axios.get(apiUrl).then(displayTemperature)
+
+}
+
+function handleSubmit(event) {
+    event.preventDefault()
+    let cityinputElement = document.querySelector("#city-input")
+    search(cityinputElement.value)
+    
+    
+}
+
+function searcLocation(position) {
+    apiKey = "6ce66d083b4d6dddb74ba02266495c46"
+
+ apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`
+
+axios.get(apiUrl).then(displayTemperature)
+
+};
+ 
+    
+
+function getCurrentLocation(event) {
+event.preventDefault()
+navigator.geolocation.getCurrentPosition(searcLocation) 
+}
+
+
+
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit)
+
+let currentLocationElement = document.querySelector("#current-location")
+currentLocationElement.addEventListener("click", getCurrentLocation)
+
+search("Lagos")
