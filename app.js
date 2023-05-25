@@ -163,7 +163,11 @@ function displayCelciusConversion(event) {
     
 }
 
+
+
 let celciusTemperature = null
+
+search("Lagos")
 
 
 let form = document.querySelector("#search-form");
@@ -178,4 +182,6 @@ fahrenheitValue.addEventListener("click", displayFahrenheitConversion)
 let celciusValue = document.querySelector("#celcius")
 celciusValue.addEventListener("click", displayCelciusConversion)
 
-search("Lagos")
+
+
+

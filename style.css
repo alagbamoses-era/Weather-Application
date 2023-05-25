@@ -1,6 +1,8 @@
 body{
-font-family: Arial, Helvetica, sans-serif;
-color: rgb(135, 135, 135);
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+color: black;
+background-color: grey;
+background-size:cover;
 }
 
 h1{
@@ -20,7 +22,7 @@ margin: 0;
 li{
     list-style: none;
         
-        color: rgb(135, 135, 135);
+        color: black;
         font-size: 16px;
         font-weight: 100;
         text-align: left;
@@ -28,19 +30,24 @@ li{
 
 .container {
     margin-top: 30px;
+    max-width: 600px;
+    background-color: beige;
     
 }
 .weather{
-    max-width: 600px;
         margin: 20px auto;
+        padding: 10px 20px;
+        
+        
         
 
 }
 
 .weather-app{
-    max-width: 600px;
+   
     border: 2px solid black;
-    padding: 20px;
+    border-radius: 8px;
+    padding: 10px 20px;
     
     
 }
