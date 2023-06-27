@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Front-end developer: Moses Agunbiade based in United Kingdom"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
@@ -22,7 +26,7 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="style.css" />
-    <title>Web App</title>
+    <title>Web App: Moses Agunbiade</title>
   </head>
   <body>
     <div class="container">
@@ -37,6 +41,7 @@
                   id="city-input"
                   placeholder="Type a city name"
                   autocomplete="off"
+                  title="Enter the name of the city you are looking for"
                 />
               </div>
               <div class="col-md-3 mt-2 text-center">
@@ -44,6 +49,7 @@
                   type="submit"
                   class="btn btn-primary W-100"
                   value="Search"
+                  title="Click here to see the weather condition"
                 />
               </div>
               <div class="col-md-3 mt-2 text-center">
@@ -52,6 +58,7 @@
                   class="btn btn-success W-100"
                   value="Current"
                   id="current-location"
+                  title="Check the weather condition of your current location"
                 />
               </div>
             </div>
@@ -72,11 +79,8 @@
               <span class="weather-temperature"
                 ><strong class="temp" id="temperature"></strong
                 ><span class="units">
-                  <a href="#" id="celcius" class="active">°C</a>|<a
-                    href="#"
-                    id="fahrenheit"
-                    >°F</a
-                  ></span
+                  <a href="#" id="celcius" class="active" title="Celcius">°C</a
+                  >|<a href="#" id="fahrenheit" title="Fahrenheit">°F</a></span
                 ></span
               >
             </div>
@@ -93,6 +97,7 @@
         <a
           href="https://github.com/alagbamoses-era/Weather-Application"
           target="_blank"
+          title="Moses Agunbiade's Weather-Application codes on github"
         >
           Open-Source code by</a
         >: Moses Agunbiade
