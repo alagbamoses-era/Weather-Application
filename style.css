@@ -67,3 +67,11 @@ line-height: 64px;
     top: -20px;
 
 }
+@media (max-width:600px) {
+    .search-location {
+        display: flex;
+        justify-content: space-evenly;
+        
+    }
+    
+}
