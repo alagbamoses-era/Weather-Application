@@ -30,7 +30,7 @@ li{
 
 .container {
     margin-top: 30px;
-    max-width: 600px;
+    max-width: 500px;
     background-color: beige;
     
 }
@@ -67,11 +67,16 @@ line-height: 64px;
     top: -20px;
 
 }
-@media (max-width:600px) {
-    .search-location {
-        display: flex;
-        justify-content: space-evenly;
-        
-    }
+
+.social-handles {
+    display: flex;
     
+    justify-content: space-between;
+
+    
+}
+@media (max-width:400px){
+    .social-handles {
+        font-size: 12px;
+    }
 }
